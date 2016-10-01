@@ -1,0 +1,119 @@
+<head>
+  <title>app</title>
+<style>
+@import 'https://fonts.googleapis.com/css?family=BioRhyme';
+</style>  
+</head>
+
+<body>
+  <h1></h1>
+
+  {{> hello}}
+  {{> info}}
+
+</body>
+
+<template name="hello">
+<div id="sideMenu"> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Emblem_of_the_United_States_Department_of_the_Army.svg/2000px-Emblem_of_the_United_States_Department_of_the_Army.svg.png" width="90px" height="90px"><br>
+        <div id=clas>Unclassified</div>       
+  </div>
+ 
+<script type="text/javascript">
+    var data = document.createElement('div');
+                data.className = "data";
+                    data.innerHTML = "Data";
+    var type = document.createElement('div');
+                type.className = "type";
+                    type.innerHTML = "Type";
+    var options = document.createElement('div');
+                options.className = "options";
+                    options.innerHTML = "Options";
+    var staff = document.createElement('div');
+                staff.className = "staff";
+                    staff.innerHTML = "Staff";
+                    
+    var legend = document.createElement('div');
+                legend.className = "legend";
+                    legend.innerHTML = "Legend";                                
+    
+    sideMenu.appendChild(data);
+    sideMenu.appendChild(type);
+    sideMenu.appendChild(options);
+    sideMenu.appendChild(staff);
+    sideMenu.appendChild(legend);
+
+  </script>
+ <head>
+  <link rel="stylesheet" type="text/css" href="http://www.ankerst.de/lib/itemExplorer_10.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script src="http://www.ankerst.de/lib/itemExplorer_10.min.js"></script>
+</head>
+<body>
+  <script>  
+    var myIEChart = itemExplorerChart("items_all.csv");
+    showChart(); 
+    
+    function showChart() {
+      d3.select("body")
+        .append("div")
+        .attr("class", "chart")
+        .call(myIEChart);
+    }   
+  </script>
+</body>
+
+</template>
+
+<template name="info">
+
+  <div id="sideMenu"> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Emblem_of_the_United_States_Department_of_the_Army.svg/2000px-Emblem_of_the_United_States_Department_of_the_Army.svg.png" width="90px" height="90px"><br>
+        <div id=clas>Unclassified</div>
+        
+        
+        
+
+       
+  </div>
+ 
+  <div id="heatMap"><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1YjKbSBil3t0jDAF15-X5Q5rIZBSjqKjJAki-Vk5apLA&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe></div>
+
+  <script type="text/javascript">
+    var data = document.createElement('div');
+                data.className = "data";
+                    data.innerHTML = "Data";
+    var type = document.createElement('div');
+                type.className = "type";
+                    type.innerHTML = "Type";
+    var options = document.createElement('div');
+                options.className = "options";
+                    options.innerHTML = "Options";
+    var staff = document.createElement('div');
+                staff.className = "staff";
+                    staff.innerHTML = "Staff";
+                    
+    var legend = document.createElement('div');
+                legend.className = "legend";
+                    legend.innerHTML = "Legend";                                
+    
+    sideMenu.appendChild(data);
+    sideMenu.appendChild(type);
+    sideMenu.appendChild(options);
+    sideMenu.appendChild(staff);
+    sideMenu.appendChild(legend);
+
+    var e = document.getElementsByClassName('legend');
+  e.onmouseover = function() {
+  document.getElementById('popout').style.display = 'block';
+};
+e.onmouseout = function() {
+  document.getElementById('popout').style.display = 'none';
+};
+
+
+
+  </script>
+</template>
+
+
